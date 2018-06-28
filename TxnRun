@@ -1,0 +1,1 @@
+java -Djava.rmi.server.useCodebaseOnly=false -Djava.security.policy=/local/public/chs2546/policy.all TxnExample

@@ -1,0 +1,2 @@
+CLASSPATH=.:/local/apache-river-2.2.2/lib/jini-core.jar:/local/apache-river-2.2.2/lib/jini-ext.jar:/local/apache-river-2.2.2/lib/outrigger.jar:/local/apache-river-2.2.2/lib/reggie.jar:/local/apache-river-2.2.2/lib/sun-util.jar:/local/apache-river-2.2.2/lib-dl/outrigger-dl.jar
+
