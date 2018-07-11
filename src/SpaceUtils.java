@@ -1,6 +1,5 @@
 import net.jini.space.JavaSpace;
 import net.jini.core.transaction.server.TransactionManager;
-import java.rmi.RMISecurityManager;
 import net.jini.core.discovery.LookupLocator;
 import net.jini.core.lookup.ServiceRegistrar;
 import net.jini.core.lookup.ServiceTemplate;
@@ -8,6 +7,10 @@ import net.jini.core.lookup.ServiceTemplate;
 public class SpaceUtils {
 
 	public static JavaSpace getSpace(String hostname) {
+		if (System.getSecurityManager() == null) {
+			System.setSecurityManager(new SecurityManager());
+		}
+
 		JavaSpace js = null;
 		try {
 			LookupLocator l = new LookupLocator("jini://" + hostname);
@@ -32,7 +35,7 @@ public class SpaceUtils {
 
 	public static TransactionManager getManager(String hostname) {
 		if (System.getSecurityManager() == null) {
-			System.setSecurityManager(new RMISecurityManager());
+			System.setSecurityManager(new SecurityManager());
 		}
 
 		TransactionManager tm = null;

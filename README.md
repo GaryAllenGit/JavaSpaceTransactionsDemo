@@ -5,6 +5,8 @@ Written by Dr Gary Allen, University of Huddersfield.
 
 This demo shows how individual space operations (read, take, write, etc.) can be combined into a single 'ACID' transaction.  It takes an object out of the space, modifies the contents, and writes it back.
 
+It has been updated to Apache River 3.0.
+
 As usual, if using an IDE like IntelliJ or eclipse you need to create a java project with the correct classes added as libraries, then paste the code in and run it.
 You also need to create a Run Configuration and pass the correct VM arguments in order to get the code to run.  Add this:
 
@@ -27,7 +29,7 @@ then compile with:
 
 and run the code with:
 
-	java -Djava.rmi.server.useCodebaseOnly=false -Djava.security.policy=/local/public/chs2546/policy.all TxnExample
+	java -Djava.rmi.server.useCodebaseOnly=false -Djava.security.policy=policy.all TxnExample
 
 OR run a script which contains the above command with:
 
